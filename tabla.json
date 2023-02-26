@@ -1,0 +1,30 @@
+[
+    {
+        "categoria": "Banca",
+        "sitio": "BBVA",
+        "usuario": "Juan_Perez",
+        "contraseña": "*******",
+        "recordatorio": "Fecha_Nacimiento"
+    },
+    {
+        "categoria": "Correo",
+        "sitio": "Gmail",
+        "usuario": "juanperez@gmail.com",
+        "contraseña": "********",
+        "recordatorio": "mascota"
+    },
+    {
+        "categoria": "Banca",
+        "sitio": "Santander",
+        "usuario": "Capitan",
+        "contraseña": "********",
+        "recordatorio": "mascota"
+    },
+    {
+        "categoria": "Ordenador",
+        "sitio": "Pc Trabajo",
+        "usuario": "n° de cuil",
+        "contraseña": "********",
+        "recordatorio": "Pelicula Favorita"
+    }
+]

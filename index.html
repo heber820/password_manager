@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+</head>
+<body>
+<header>
+</header>
+<section class="container">
+
+    <h1 class="elegantshadow estilo">Password Manager</h1>
+    <div class="bienvenida">
+        <form id="formulario-usuario">
+            <label for="user">Ingrese Usuario
+            <input id="user" type="text" placeholder="Nombre">
+            <input class="btn btn-primary" onclick="Bienvenida()" id="ingresoUsuario" type="submit" value="Ingresar">
+        </form>
+    </div>
+<div class="container">
+    <div class="row">
+
+    <div class="col contenedorFormulario" id="contenedorFormulario">
+    </div>    
+        
+    <div class="col generadorPasword">
+            <H2>Generar Contraseñas</H2>
+            <form action="" class="app" id="app">
+                <div class="fila numero-caracteres">
+                    <div class="col">
+                        <label for="numero-caracteres">Numero de caracteres:</label>
+                    </div>
+                    <div class="col botones">
+                        <div>
+                            <button class="btn" id="btn-menos-uno"><i class="fas fa-minus"></i></button>
+                        </div>
+                        <div>
+                            <input type="text" id="numero-caracteres" readonly value="12">
+                        </div>
+                        <div>
+                            <button class="btn" id="btn-mas-uno"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="fila simbolos">
+                    <div class="col">
+                        <label for="simbolos">¿Incluir Simbolos?</label>
+                    </div>
+                    <div class="col">
+                        <button class="btn" id="btn-simbolos"><i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+                <div class="fila numeros">
+                    <div class="col">
+                        <label for="numeros">¿Incluir Numeros?</label>
+                    </div>
+                    <div class="col">
+                        <button class="btn" id="btn-numeros"><i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+                <div class="fila mayusculas">
+                    <div class="col">
+                        <label for="mayusculas">¿Incluir Mayusculas?</label>
+                    </div>
+                    <div class="col">
+                        <button class="btn" id="btn-mayusculas"><i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+                <div class="fila generar">
+                    <div class="col">
+                        <button class="btn btn-generar" id="btn-generar">Generar <i class="fas fa-lock"></i></button>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="input-password" id="input-password" readonly value="*********">
+                    </div>
+                </div>
+                <div class="fila alerta">
+                    <div class="col">
+                        <div class="alerta-copiado" id="alerta-copiado">
+                            <p><i class="fas fa-copy"></i> Texto Copiado!</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+    </div>
+
+    </div>
+</div>
+<section>
+
+</section>
+    <div class="table-responsive container my-5 text-center" >
+        <table class="table table-dark table-sm table-bordered border-primary">
+            <thead>
+                <tr>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Sitio</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Contraseña</th>
+                    <th scope="col">Recordatorio</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listPassword">
+                    
+                </tbody>
+        </table>
+    </div>
+    <!-- Mostrar Ejemplos JSON -->
+    <div class="table-responsive container my-5 text-center">
+        <h2>Acá podrás visualizar unos ejemplos</h2>
+        <div class="col-lg text-center">
+            <button class="btn btn-danger" onclick= "traer()"> Mostrar Ejemplos</button>
+            <button class="btn btn-danger" onclick="ocultarEjemplos()"> Ocultar Ejemplos</button>
+        </div>
+        <div class="mt-5">
+            <table class="table table-dark table-sm table-bordered border-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Sitio</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">Recordatorio</th>
+                    </tr>
+                </thead>
+                <tbody id="contenido">
+                    
+                </tbody>
+            </table>
+        </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.33/dist/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="./password_manager.js"></script>
+<script src="./generadorPassword.js"></script>
+</body>
+</html>
